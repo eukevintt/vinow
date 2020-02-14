@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vinow - Contato</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!--  Modal login   -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitulo"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLoginTitulo">
+            Entre na Sua Conta
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="email" class="form-control" id="loginEmail">
+          </div>
+          <div class="form-group">
+            <label for="loginSenha">Senha</label>
+            <input type="password" id="senha" class="form-control" id="loginSenha">
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="logar()">Entrar na Conta</button>
+          <small class="form-text text-muted">Esqueceu a senha? <a href="#">Clique aqui</a>.</small>
+
+          <div class="form-group centro mt-2">
+            <input type="button" class="btn google" value="Login com o Google">
+          </div>
+
+          <div class="form-group centro ">
+            <input type="button" class="btn fb" value="Login com o Facebook">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Modal login   -->
+
+  <!-- Modal perfil -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="modalperfil">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Meu Perfil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label for="upload"><img class="d-block m-auto circulo" id="img" class="img-fluid" onclick="mudarfoto()">
+            <div id="co"><input type="file" id="upload" class="d-none"></div>
+          </label>
+          <h3><output id="nomee" class="centro mt-3"></output></h3>
+          <div id="dadopesso"></div>
+          <section>
+            <h3 class="text-center mt-3">Postagens</h3>
+            <p class="blockquote mt-3">Viagem hoje para o Rio de Janeiro foi maravilhoso! <small
+                class="form-text text-muted">03 de novembro às 20:22</small></p>
+            </p>
+            <div class="row">
+              <div class="centro">
+                <img class="img-fluid mb-4 imagemp" src="img/a.jpg" alt="Foto 1">
+                <img class="img-fluid mb-4 imagemp" src="img/b.jpg" alt="Foto 1">
+                <img class="img-fluid mb-4 imagemp" src="img/c.jpg" alt="Foto 1">
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <p class="blockquote">A melhor viagem que eu fiz foi para paris!<small class="form-text text-muted">28 de
+                outubro às 10:45</small></p>
+            <div class="row">
+              <div class="centro">
+                <img class="img-fluid mb-4 imagemp" src="img/d.jpg" alt="Foto 1">
+                <img class="img-fluid mb-4 imagemp" src="img/e.jpg" alt="Foto 1">
+                <img class="img-fluid mb-4 imagemp" src="img/f.jpg" alt="Foto 1">
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+          </section>
+
+          <form class="bg-light box-shadow2 form-row centro">
+            <h4 class="centro2 h5">Deixe seu comentário</h4>
+
+            <div class="container-3 col-md-9 justify-content-center d-block">
+              <p>
+                <output id="comenta" class="d-block"></output>
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="nomecoment" class="lead">Nome: </label>
+              <input type="text" size="50" maxlength="60" id="nomecoment">
+            </div>
+
+            <div class="form-group">
+              <label for="coment" class="lead">Deixe sua mensagem:</label>
+              <input type="text" size="32" id="coment">
+            </div>
+
+            <div class="form-group col-4">
+              <input type="button" class="btn btn-primary" value="Comentar" onclick="comentario()">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Perfil -->
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
+    <a href="index.html" class="navbar-brand">
+      <img src="img/vinow.png" class="logo" alt="ViNow">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir Navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Locais</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="rj.html">Rio de Janeiro</a>
+            <a class="dropdown-item" href="sp.html">São Paulo</a>
+            <a class="dropdown-item" href="ba.html">Salvador</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="planos.html">Planos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item" id="login">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
+        </li>
+        <li class="nav-item" id="sair">
+          <a class="btn btn-outline-primary ml-md-2" href="inscricao.html">Inscreva-se</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="my-5 text-center">
+      <span class="h6 d-block">POSSUI ALGUMA DÚVIDAS?</span>
+      <h2 class="display-4 text-primary">Fale Conosco</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg mb-5">
+        <form class="bg-light rounded p-4 box-shadow">
+          <div class="form-group">
+            <label for="exampleInputnome1">Nome</label>
+            <input type="email" class="form-control" id="exampleInputnome1" aria-describedby="emailHelp"
+              placeholder="meunome">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="meunome@provedor.com">
+          </div>
+          <div class="form-group">
+            <label for="clientemsg">Mensagem</label>
+            <textarea id="clientemsg" class="form-control" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+      </div>
+      <div class="col-lg">
+        <h6>NOSSO ENDEREÇO</h6>
+        <p>Av. Atlântica, 1702 - Copacabana, Rio de Janeiro - RJ, 22021-001</p>
+
+        <h4 class="h6">DADOS DE CONTATO</h4>
+        <ul class="list-unstyled text-secondary">
+          <li>(21) 3460-4040</li>
+          <li>(21) 2548-7070</li>
+          <li>Segunda a Sexta das 07hrs - 18hrs</li>
+        </ul>
+        <h4 class="h6">REDES SOCIAIS</h4>
+        <ul class="list-unstyled " style="max-width: 260px;">
+          <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#">Facebook</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#">Twitter</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="my-3 text-center">
+      <h2 class="display-4 text-primary">Perguntas Frequentes</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6" id="perguntasFrequentes" data-children=".pergunta">
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta1"
+            aria-expanded="true" aria-controls="pergunta1">Posso enviar meu currículo por e-mail?</a>
+          <div id="pergunta1" class="collapse show" role="tabpanel">
+            <p>Nossos processos seletivos são 100% informatizados. Para incluir seu currículo em nosso banco de
+              talentos, é necessário cadastrar-se no sistema.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta2"
+            aria-expanded="true" aria-controls="pergunta2">O que é espera 24 horas?</a>
+          <div id="pergunta2" class="collapse" role="tabpanel">
+            <p>Espera 24 horas é o tempo em que sua compra fica reservada aguardando a confirmação de que o pagamento
+              foi realizado ou, no caso de cartões de crédito, liberados pela operadora. Se por algum motivo a
+              confirmação demorar mais do que 24 horas, a reserva será desconsiderada e será preciso começar uma nova
+              compra.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta3"
+            aria-expanded="true" aria-controls="pergunta3">Como pagar com boleto?</a>
+          <div id="pergunta3" class="collapse" role="tabpanel">
+            <p>Quando você escolhe pagar com boleto bancário, o site automaticamente gera um documento com código de
+              barras, semelhante a contas de luz, gás e telefone. Com esse arquivo, você escolhe a melhor forma de
+              pagar: ir a uma agência bancária, ir a um caixa eletrônico, acessar a sua conta corrente pelo site do seu
+              banco, usar aplicativos de celular.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta4"
+            aria-expanded="true" aria-controls="pergunta4">O ViNow atende pelo telefone?</a>
+          <div id="pergunta4" class="collapse" role="tabpanel">
+            <p>Não. O Viajala é uma empresa online e atende somente pela internet, através das redes sociais ou do
+              e-mail. Não atendemos nem pelo telefone nem pelo whatsapp.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta5"
+            aria-expanded="true" aria-controls="pergunta5">O preço anunciado já inclui a bagagem despachada?
+          </a>
+          <div id="pergunta5" class="collapse" role="tabpanel">
+            <p>Depende. Voos internacionais costumam incluir bagagem despachada, mas voos nacionais costumam permitir,
+              sem custo, somente bagagem de mão - e a bagagem despachada é cobrada à parte. Certifique-se com o provedor
+              (ou seja, com a companhia aérea ou agência de viagem) qual é a política de bagagens no seu caso.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+      </div>
+    </div>
+    <div class="text-center my-4">
+      <p class="small m-1">FALE CONOSCO PARA MAIS DÚVIDAS</p>
+      <a class="btn btn-primary btn-lg" href="contato.html">Entre em Contato</a>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white mt-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <h4 class="h6">PÁGINAS</h4>
+          <ul class="list-unstyled">
+            <li><a href="planos.html">Planos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="inscricao.html">Inscreva-se</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4 class="h6">LOCAIS</h4>
+          <ul class="list-unstyled">
+            <li><a href="rj.html">Rio de Janeiro</a></li>
+            <li><a href="sp.html">São Paulo</a></li>
+            <li><a href="ba.html">Salvador</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="h6">DADOS DE CONTATO</h4>
+          <ul class="list-unstyled text-secondary">
+            <li>(21) 3460-4040</li>
+            <li>(21) 2548-7070</li>
+            <li>Segunda a Sexta das 07hrs - 18hrs</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="h6">REDES SOCIAIS</h4>
+          <ul class="list-unstyled">
+            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2 rede-sociais" href="#">Facebook</a></li>
+            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2 rede-sociais" href="#">Twitter</a></li>
+            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2 rede-sociais" href="#">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
