@@ -269,43 +269,43 @@ function aticket(opcao) {
     else if (opcao == 'r27') {
         document.getElementById('nomem').value = "Rock in Rio – 27/09"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r27')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r27')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r28') {
         document.getElementById('nomem').value = "Rock in Rio – Rock in Rio"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r28')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r28')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r29') {
         document.getElementById('nomem').value = "Rock in Rio – 29/09	"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r29')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r29')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r30') {
         document.getElementById('nomem').value = "Rock in Rio – 30/09	"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r30')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r30')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r01') {
         document.getElementById('nomem').value = "Rock in Rio – 01/10"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r01')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r01')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r02') {
         document.getElementById('nomem').value = "Rock in Rio	 – 02/10	"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r02')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r02')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r03') {
         document.getElementById('nomem').value = "Rock in Rio	 – 03/10	"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r03')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r03')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r04') {
         document.getElementById('nomem').value = "Rock in Rio	 – 04/10	"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r04')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r04')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r05') {
         document.getElementById('nomem').value = "Rock in Rio	 – 05/10	"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r05')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r05')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     } else if (opcao == 'r06') {
         document.getElementById('nomem').value = "Rock in Rio	 – 06/10	"
 
-        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r06')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">500</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
+        document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r06')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     }
 }
 function pgm(evento) {
@@ -422,12 +422,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(nn)
+        total = a + fotoElenco + 500
         document.getElementById('total').value = total
     }
 
@@ -436,12 +436,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -450,12 +450,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -464,12 +464,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -478,12 +478,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -492,12 +492,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -506,12 +506,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -520,12 +520,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -534,12 +534,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 
@@ -548,12 +548,12 @@ function valor(c) {
 
         a = 50
         if (document.getElementById('fte').checked) {
-            nn = 100
+            fotoElenco = 100
         } else {
-            nn = 0
+            fotoElenco = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(fotoElenco) + 500
         document.getElementById('total').value = total
     }
 }
