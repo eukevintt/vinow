@@ -1,6 +1,3 @@
-// Comprar passagem
-
-
 // vip
 
 if (document.querySelector('#vip')) {
@@ -198,12 +195,13 @@ function inscreva() {
 datatual = new Date();
 datainput = localStorage.nasc
 datainput2 = datainput.split('-')
+
 // Dados pessoais
 document.getElementById('nomee').value = localStorage.nome
 idade = datatual.getFullYear() - datainput2[0]
 document.getElementById('dadopesso').innerHTML = `<div>Você tem ${idade} anos</div><div>Data de nascimento: ${datainput2[2]}/${datainput2[1]}/${datainput2[0]}</div><div>Você mora em ${localStorage.endereco}, ${localStorage.cidade} - ${localStorage.cep}</div>`
-// 
 
+//comentario perfil
 function comentario() {
     nomecomentario = document.getElementById('nomecoment').value
     comentario['x'] = document.getElementById('coment').value
@@ -429,7 +427,7 @@ function valor(c) {
             nn = 0
         }
 
-        total = Number(a) + Number(fte)
+        total = Number(a) + Number(nn)
         document.getElementById('total').value = total
     }
 
