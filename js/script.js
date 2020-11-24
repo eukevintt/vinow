@@ -23,7 +23,7 @@ function vip() {
             viagem = 700
             break;
     }
-
+// Tentar colocar em uma função separada, e chamar essa função aqui
     if (document.getElementById('tour').checked) {
         tour = 100
     } else {
@@ -92,36 +92,28 @@ function gold() {
 
 
 // Aba de login
+// Se eu estiver logado, os butões de login e inscreva-se sai e entram o de meu perfil e sair
 addEventListener('load', () => {
     if (localStorage.login == 'true') {
         document.querySelector('#login').innerHTML = `<a class="nav-link" href="#" data-toggle="modal" data-target="#modalperfil">Meu perfil</a>`
 
         document.querySelector('#sair').innerHTML = `<a class="btn btn-outline-primary ml-md-2" href="#"  onclick="sair()">Sair</a>`
-
-        localStorage.branco = ''
-
-        document.getElementById('co').innerHTML = localStorage.branco
     }
 })
 
 function logar() {
     email = document.getElementById('email').value
+    console.log(email)
     senha = document.getElementById('senha').value
 
     if (email == 'admin@admin.com' && senha == '123') {
+        return changeMenu()
+    } else if (email == localStorage.verifyEmail && senha == localStorage.verifySenha) {
+        return changeMenu()
+    }
+}
 
-        document.querySelector('#login').innerHTML = `<a class="nav-link" href="#" data-toggle="modal" data-target="#modalperfil">Meu perfil<span class="badge badge-info">4</span></a>`
-
-        document.querySelector('#sair').innerHTML = `<a class="btn btn-outline-primary ml-md-2" href="#"  onclick="sair()">Sair</a>`
-
-        document.getElementById('img').src = 'img/sem-foto.png'
-
-        localStorage.login = true
-
-        $('#modalLogin').modal('toggle')
-
-    } else if (email == localStorage.emaill && senha == localStorage.senhaa) {
-
+function changeMenu() {
         document.querySelector('#login').innerHTML = `<a class="nav-link" href="#" data-toggle="modal" data-target="#modalperfil">Meu perfil <span class="badge badge-info">4</span></a>`
 
         document.querySelector('#sair').innerHTML = `<a class="btn btn-outline-primary ml-md-2" href="#"  onclick="sair()">Sair</a>`
@@ -131,7 +123,6 @@ function logar() {
         localStorage.login = true
 
         $('#modalLogin').modal('toggle')
-    }
 }
 
 function sair() {
@@ -146,7 +137,8 @@ function sair() {
 if (localStorage.img) {
     document.getElementById('img').src = localStorage.img
 }
-$(function () {
+
+$(function(){
     $('#upload').change(function () {
         const file = $(this)[0].files[0]
         const fileReader = new FileReader()
@@ -154,16 +146,15 @@ $(function () {
             img = $('#img').attr('src', fileReader.result)
             localStorage.img = fileReader.result
         }
-
         localStorage.img = fileReader.readAsDataURL(file)
-        document.getElementById('co').innerHTML = localStorage.branco
     })
 })
+    
 
 function mudarfoto() {
-    document.getElementById('co').innerHTML = `<input type="file" id="upload" style="display:none">`
+    document.getElementById('upload').innerHTML = `<input type="file" id="upload" style="display:none">`
 
-    $(function () {
+    $(function(){
         $('#upload').change(function () {
             const file = $(this)[0].files[0]
             const fileReader = new FileReader()
@@ -172,7 +163,6 @@ function mudarfoto() {
                 localStorage.img = fileReader.result
             }
             localStorage.img = fileReader.readAsDataURL(file)
-            document.getElementById('co').innerHTML = localStorage.branco
         })
     })
 }
@@ -181,55 +171,54 @@ function mudarfoto() {
 // Inscreva-se
 
 function inscreva() {
-    localStorage.nome = document.getElementById('inputnome').value
-    localStorage.emaill = document.getElementById('inputemail').value
-    localStorage.senhaa = document.getElementById('inputsenha').value
-    localStorage.endereco = document.getElementById('inputendereco').value
-    localStorage.cidade = document.getElementById('inputcidade').value
-    localStorage.cep = document.getElementById('inputcep').value
-    localStorage.nasc = document.getElementById('inputdata').value
+    localStorage.nome = document.getElementById('inputNome').value
+    localStorage.verifyEmail = document.getElementById('inputEmail').value
+    localStorage.verifySenha = document.getElementById('inputSenha').value
+    localStorage.endereco = document.getElementById('inputEndereco').value
+    localStorage.cidade = document.getElementById('inputCidade').value
+    localStorage.cep = document.getElementById('inputCep').value
+    localStorage.nasc = document.getElementById('inputData').value
     $('#modalsucesso').modal('show')
 }
 
 // Perfil
 datatual = new Date();
-datainput = localStorage.nasc
-datainput2 = datainput.split('-')
+datainput2 = localStorage.nasc.split('-')
 
 // Dados pessoais
-document.getElementById('nomee').value = localStorage.nome
+document.getElementById('nome_perfil').value = localStorage.nome
 idade = datatual.getFullYear() - datainput2[0]
 document.getElementById('dadopesso').innerHTML = `<div>Você tem ${idade} anos</div><div>Data de nascimento: ${datainput2[2]}/${datainput2[1]}/${datainput2[0]}</div><div>Você mora em ${localStorage.endereco}, ${localStorage.cidade} - ${localStorage.cep}</div>`
 
 //comentario perfil
 function comentario() {
-    nomecomentario = document.getElementById('nomecoment').value
-    comentario['x'] = document.getElementById('coment').value
+    nomeComentario = document.getElementById('nomeComent').value
+    comentario['x'] = document.getElementById('message').value
 
 
-    if (nomecomentario != "") {
+    if (nomeComentario != "") {
         data = new Date()
         hora = data.getHours() + ":" + data.getMinutes()
-        come = document.getElementById('comenta')
+        message = document.getElementById('comentSaida')
         avatar = document.getElementById('avatar')
-        come.innerHTML += `<img src="img/teste_perfil/coment.jpg" onclick="caqui()" class="img-ava d-block mt-4" id="avatar" align="left"><h4 class="mt-4">${nomecomentario}</h4><output id="comenta" class="d-block mt-3 ml-6">${comentario['x']}</output><output class="time-right" id="hora">${hora}</output>`
-        localStorage.comen = come
+        messsage.innerHTML += `<img src="img/teste_perfil/coment.jpg" class="img-ava d-block mt-4" id="avatar" align="left"><h4 class="mt-4">${nomeComentario}</h4><output id="comentSaida" class="d-block mt-3 ml-6">${comentario['x']}</output><output class="time-right" id="hora">${hora}</output>`
+        localStorage.comen = message
     } else {
         data = new Date()
         hora = data.getHours() + ":" + data.getMinutes()
-        come = document.getElementById('comenta')
-        come.innerHTML += `<img src="img/sem-foto.png" class="img-ava d-block mt-4" id="avatar" align="left"><h4 class="mt-4">Anônimo</h4> <output id="comenta" class="d-block mt-3 ml-6">${comentario['x']}</output><output class="time-right" id="hora">${hora}</output>`
-        localStorage.comen = come
+        message = document.getElementById('comentSaida')
+        message.innerHTML += `<img src="img/sem-foto.png" class="img-ava d-block mt-4" id="avatar" align="left"><h4 class="mt-4">Anônimo</h4> <output id="comentSaida" class="d-block mt-3 ml-6">${comentario['x']}</output><output class="time-right" id="hora">${hora}</output>`
+        localStorage.comen = message
     }
-    localStorage.comen = document.getElementById('comenta').innerHTML
-    localStorage.comentario = document.getElementById('comenta').value
+    localStorage.comen = document.getElementById('comentSaida').innerHTML
+    localStorage.comentario = document.getElementById('comentSaida').value
 }
 
 addEventListener('load', () => {
     if (localStorage.comentario == undefined) {
-        document.getElementById('comenta').innerHTML = ''
+        document.getElementById('comentSaida').innerHTML = ''
     } else {
-        document.getElementById('comenta').innerHTML = localStorage.comen
+        document.getElementById('comentSaida').innerHTML = localStorage.comen
     }
 })
 // Rockinrio
@@ -308,252 +297,90 @@ function aticket(opcao) {
         document.getElementById('venda').innerHTML = `<div class="row"><div class="col"><smal class="form-text">Preço: R$50</smal><h5>Escolha algumas vantagens adicionais:</h5><label for="fte" class="my-1">Foto com elenco<input type="checkbox" onchange="valor('r06')" name="" id="fte"></label><div>Digite seu email: <input type="email"></div></div><div class="preco col"><h6>Valor Total:</h6><h3 class="text-center">R$<output id="total">550</output></h3><button class="btn btn-success compra" onclick="pgm('')">Comprar</button></div></div>`
     }
 }
-function pgm(evento) {
+function pgm() {
     alert('Verifique sua caixa de email, para seguir os outros procedimentos!')
+}
+
+function valorTot(a) {
+    total = document.getElementById('total').value
+
+    if (document.getElementById('fte').checked) {
+        fte = 100
+    } else {
+        fte = 0
+    }
+
+    total = Number(a) + Number(fte)
+    document.getElementById('total').value = total
+
 }
 
 function valor(c) {
     if (c == 'fo') {
-        total = document.getElementById('total').value
-
-        a = 200
-        if (document.getElementById('fte').checked) {
-            fte = 100
-        } else {
-            fte = 0
-        }
-
-        total = Number(a) + Number(fte)
-        document.getElementById('total').value = total
-
+        return valorTot(200)
     }
 
     else if (c == 'ih') {
-        total = document.getElementById('total').value
-
-        a = 300
-        if (document.getElementById('fte').checked) {
-            fte = 100
-        } else {
-            fte = 0
-        }
-
-        total = Number(a) + Number(fte)
-        document.getElementById('total').value = total
-
+        return valorTot(300)
     }
 
     else if (c == 'tp') {
-        total = document.getElementById('total').value
-
-        a = 500
-        if (document.getElementById('fte').checked) {
-            fte = 100
-        } else {
-            fte = 0
-        }
-
-        total = Number(a) + Number(fte)
-        document.getElementById('total').value = total
-
+        return valorTot(500)
     }
 
     else if (c == 'iqa') {
-        total = document.getElementById('total').value
-
-        a = 100
-        if (document.getElementById('fte').checked) {
-            fte = 100
-        } else {
-            fte = 0
-        }
-
-        total = Number(a) + Number(fte)
-        document.getElementById('total').value = total
-
+        return valorTot(100)
     }
 
     else if (c == 'b8') {
-        total = document.getElementById('total').value
-
-        a = 500
-        if (document.getElementById('fte').checked) {
-            fte = 100
-        } else {
-            fte = 0
-        }
-
-        total = Number(a) + Number(fte)
-        document.getElementById('total').value = total
-
+        return valorTot(500)
     }
 
     else if (c == 'zrr') {
-        total = document.getElementById('total').value
-
-        a = 200
-        if (document.getElementById('fte').checked) {
-            fte = 100
-        } else {
-            fte = 0
-        }
-
-        total = Number(a) + Number(fte)
-        document.getElementById('total').value = total
-
+        return valorTot(200)
     }
 
     else if (c == 'nn') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            nn = 100
-        } else {
-            nn = 0
-        }
-
-        total = Number(a) + Number(fte)
-        document.getElementById('total').value = total
+        return valorTot(50)
     }
 
     else if (c == 'r27') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = a + fotoElenco + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r28') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r29') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r30') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r01') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r02') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r03') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r04') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r05') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 
     else if (c == 'r06') {
-        total = document.getElementById('total').value
-
-        a = 50
-        if (document.getElementById('fte').checked) {
-            fotoElenco = 100
-        } else {
-            fotoElenco = 0
-        }
-
-        total = Number(a) + Number(fotoElenco) + 500
-        document.getElementById('total').value = total
+        return valorTot(550)
     }
 }
